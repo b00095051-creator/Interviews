@@ -61,10 +61,10 @@ small{color:var(--mu)}
 </head>
 <body>
 <header><div class="w">
-<div class="m">Assessment Centre · Associate Sales Representative · Interview</div>
+<div class="m">Assessment Centre · Associate Sales Representative · Interview + Role Play</div>
 <h1>Cisco CSAP, <em>STAR-L</em> Interview Playbook</h1>
 <div>Khaled Almuwahed · 30 minutes · Account Managers from Sales Enablement, Field Sales and Global Velocity Sales</div>
-<div class="bd"><span>BEHAVIORAL ONLY</span><span>NO TECHNICAL READ-UP</span><button id="th">Toggle theme</button><button id="cv">Cover mode: off</button></div>
+<div class="bd"><span>INTERVIEW: STAR-L</span><span>ROLE PLAY: DISCOVERY</span><button id="th">Toggle theme</button><button id="cv">Cover mode: off</button></div>
 </div></header>
 <nav><div class="w" id="nav"></div></nav>
 <main><div class="w" id="app"></div></main>
@@ -145,6 +145,54 @@ const TM=[
 ['STAGE 3 · CONNECTION','Why Cisco, why CSAP, why now','Cisco took [[$9.3B]] of hyperscaler AI orders last year and is a preferred technology partner in Stargate UAE, because AI runs on networking and security. CSAP is where I learn that portfolio and get a real number to carry, and I want to bring that back to this region.']
 ];
 const tmayHTML=()=>TM.map(b=>`<div class="c"><div class="m">${b[0]} · ${b[1]}</div><p class="ans" style="margin-top:6px">${f(b[2])}</p></div>`).join('')+`<div class="w2 ok"><b>Delivery:</b> about 2 minutes. Slow down on the numbers and land the last sentence on Cisco by name. On video, look at the lens for Stage 3.</div>`;
+const PH=[
+[0,'Open','2 min','Set the frame, ask permission, promise no pitch.',`"Thanks for making time, Sam. I know you're busy and probably get plenty of vendor calls. I won't pitch anything today. I'd like to learn how Rivera Coffee runs and what's getting in the way, and then we can decide together if another chat is worth your time. Does that sound fair?"`],
+[120,'Their story','3 min','Get Sam talking about the growth. Pride first, problems second.',`"How did you get from 3 shops to 12 in three years?" then "What got harder along the way?"`],
+[300,'Dig','8 min','Find the real problem underneath, and what it costs. Follow Sam, not your list.',`"Tell me more about that." "Why does that matter?" "What is that costing you?" "What have you tried?"`],
+[780,'The AI angle','4 min','Explore what Sam has heard, where it could help, and where it is noise. Do not pitch.',`"You mentioned AI. What have you been hearing, and what made you curious?"`],
+[1020,'Play it back','2 min','Summarise in Sam\'s words and check you got it right.',`"Here's what I heard: growth outran the back office, you are the bottleneck on decisions, and you want to know where AI is real. Did I miss anything?"`],
+[1140,'Earn the second meeting','1 min','Ask for a small, specific next step tied to what Sam said.',`"Would 30 minutes next week work? I'll bring a short view on [their top issue], and a colleague from our technical team if it helps. Which day suits you?"`]
+];
+const RQ=[
+['Growth and the back office',[
+ ['How did you get from 3 shops to 12 in three years?','What got harder as you grew?','What did that cost you in time or money?'],
+ ['How do the shops run behind the counter day to day? Ordering, payments, scheduling, Wi-Fi?','Who fixes things when they break?','What happens at a busy campus shop at 8am if the systems go down?'],
+ ['Which decisions still come to you that you wish did not?','What would you do with that time instead?']]],
+['Customer experience',[
+ ['What do your regulars love most about the shops?','What would put that at risk as you grow?'],
+ ['How do peak times feel, especially near the campuses?','What do customers complain about, and how do you find out?'],
+ ['Do customers use Wi-Fi, mobile ordering or a loyalty app today?','How is that working across all 12 shops?']]],
+['Data, payments and consistency',[
+ ['How do you feel about customer and payment data across 12 locations?','Who looks after it today?'],
+ ['Does every shop run the same way, or is each a little different?','What does that inconsistency cost you?']]],
+['The future',[
+ ['What has to be true for you to reach 20 shops?','What worries you most about getting there?'],
+ ['If we spoke in six months and this had gone well, what would be different?']]],
+['AI (the heart of the scenario)',[
+ ['What have you been hearing about AI for a business like yours?','What made you curious about it?'],
+ ['Where do you feel stuck or overwhelmed when it comes to AI?','What have you tried, if anything?'],
+ ['If AI worked perfectly, what is the first problem you would want it to fix?','How would you know it was worth the money?']]]
+];
+const HYPE=[
+['Where it could help (explore, do not assert)','Predicting busy periods for staffing and stock, cutting admin and reporting time, faster answers to customer questions, and spotting problems across shops earlier.'],
+['Where it is mostly noise for a business this size','Big custom AI platforms, replacing the human warmth Sam is proud of, and "AI everything" before the basics like a reliable network and clean data are in place.'],
+['The honest line to say','"AI only helps if it solves a real problem. Let\'s find the problem first, and then see whether AI is even the right tool."']
+];
+const CSOL=[
+['Network reliability','A patchwork of systems and an outside IT contractor point to a fragile, hard-to-see network. Ask about downtime, not products.'],
+['Security','Payment and customer data across 12 sites. Ask who is responsible and what happens after a breach.'],
+['Guest and customer experience','Guest Wi-Fi, mobile ordering and peak-time lines, especially near campuses.'],
+['Collaboration','Keeping shop managers and Sam connected as the chain grows toward 20.']
+];
+const OBJ=[
+[`"I get vendor calls all the time."`,`"Fair enough. I'm not here to pitch. If this isn't useful after 20 minutes, we stop."`],
+[`"I'm really busy."`,`"Understood, and that is exactly what I would like to hear more about. What is taking most of your time?"`],
+[`"AI sounds like hype."`,`"A lot of it is, honestly. What would make something worth your time?"`],
+[`"Just send me a brochure. What does it cost?"`,`"Happy to. The right answer depends on what you actually need, so can I ask two questions first?"`],
+[`"I already have an IT guy."`,`"How is that working out? What happens when something breaks at a busy time?"`],
+[`You do not know the answer`,`"I don't know that yet. Let me find out and bring it to our next conversation."`]
+];
+
 const Q=[
 ['Behavioral','Tell me about a time you influenced someone who did not report to you.',5,'Clarity and Ownership. Do they hear "I", and did you move a senior person?','Spend 45% of your time on Action. Show how you framed it around their priority.','Saying "we" for the entire answer.'],
 ['Behavioral','Tell me about a time you delivered a measurable result.',0,'Do you know your numbers and your own contribution?','Say 80% and 27% in the first 20 seconds of Result. Split what you did from what the team did.','Burying the number at the end.'],
@@ -171,6 +219,39 @@ ${Object.keys(KEYS).map(k=>`<div class="row ${k}"><span class="k">${k}</span><di
 'About me':()=>`<h2>Tell me about yourself</h2><p class="lead">Funnel method: broad, then focused, then specific to Cisco. About 2 minutes.</p>${tmayHTML()}`,
 'Stories':()=>`<h2>Story bank</h2><p class="lead">Six stories cover almost any question. Yellow blocks are gaps only you can fill. Fill them, then say each aloud in 2 minutes.</p>`+STORIES.map((s,i)=>`<details ${i?'':'open'}><summary><span><span class="tag">${s.t}</span><br>${s.n}</span></summary><div class="in">${row(s)}</div></details>`).join(''),
 'Questions':()=>`<h2>Question bank</h2><p class="lead">${Q.length+1} likely questions. The answer sits directly under each question.</p><details><summary><span><span class="tag">Opener</span>Tell me about yourself.</span></summary><div class="in">${tmayHTML()}</div></details>`+Q.map(q=>`<details><summary><span><span class="tag">${q[0]}</span>${q[1]}</span></summary><div class="in">${q[2]!==null?`<div class="m">Your answer: ${STORIES[q[2]].n}</div>${row(STORIES[q[2]])}<p><b>Angle:</b> <span class="ans">${f(q[4])}</span></p>`:`<p><b>Answer:</b> <span class="ans">${f(q[4])}</span></p>`}<p><b>Testing:</b> ${q[3]}</p><div class="w2"><b>Avoid:</b> ${q[5]}</div></div></details>`).join(''),
+'Role play':()=>`<h2>Role play: discovery call with Sam</h2><p class="lead">20 minutes live call, then 10 minutes assessor feedback. You are an Associate Sales Rep. Sam runs Rivera Coffee Co., 12 shops. Come with questions and a plan, not a script.</p>
+<div class="c"><h3>Your one goal</h3><p><b>Earn the second meeting.</b> No pitch, no demo. Understand Sam's business, what is in the way, and what it costs. Sam should leave feeling understood.</p>
+<p style="margin-top:10px"><button class="p" id="rtm">Start 20 min call timer</button> <b id="rtv" class="m" style="font-size:15px"></b></p></div>
+<div class="c"><h3>Live cheat-sheet</h3>
+${PH.map(p=>`<div class="row A" style="--x:var(--ac)"><span class="k" style="width:auto;padding:0 6px">${Math.floor(p[0]/60)}m</span><div><b>${p[1]}</b> <small>(${p[2]})</small><br><small>${p[3]}</small></div></div>`).join('')}
+<div class="w2 ok"><b>Five follow-ups that always work:</b> "Tell me more about that." "Why does that matter?" "What is that costing you?" "What have you tried?" "What would good look like?"</div>
+<div class="w2"><b>Talk ratio:</b> aim for Sam talking about 70% of the time. Ask the question underneath the first answer.</div></div>
+<h3 style="margin:18px 0 4px">Sam and Rivera Coffee Co.</h3>
+<div class="g"><div class="c"><h3>The business</h3><ul><li>Grew from 3 to 12 shops in about 3 years, aiming for 20 in 2 more.</li><li>Known for quality drinks, warm service, loyal regulars. Two busiest shops are near college campuses.</li><li>Each shop opened as its own project, so systems were added one at a time: a patchwork behind the counter.</li></ul></div>
+<div class="c"><h3>Sam the person</h3><ul><li>Proud, protective of the customer experience, stretched thin.</li><li>Makes most big decisions personally. Small team plus an outside IT contractor who visits when things break.</li><li>A business owner, not a technologist. No jargon. Skeptical of "another vendor". Curious but overwhelmed by AI.</li></ul></div></div>
+<h3 style="margin:18px 0 4px">Opening and question bank</h3><p class="lead">Open questions only (what, how, why). Each block has the first question and the layers underneath.</p>
+<details open><summary><span><span class="tag">Open</span>Your first 2 minutes</span></summary><div class="in"><p class="ans">${PH[0][4]}</p></div></details>
+${RQ.map(g=>`<details><summary><span>${g[0]}</span></summary><div class="in">${g[1].map(c=>`<div class="c" style="margin:8px 0"><div class="row S"><span class="k">1</span><div>${c[0]}</div></div>${c.slice(1).map((x,i)=>`<div class="row T"><span class="k">${i+2}</span><div>${x}</div></div>`).join('')}</div>`).join('')}</div></details>`).join('')}
+<h3 style="margin:18px 0 4px">The AI angle</h3>
+${HYPE.map(a=>`<div class="c"><h3>${a[0]}</h3><p class="ans">${a[1]}</p></div>`).join('')}
+<p class="lead" style="margin-top:8px">You have grown up with these tools and Sam has not. Your value is helping a non-technical owner separate real opportunity from hype.</p>
+<h3 style="margin:18px 0 4px">Cisco areas to have in your head (prep only)</h3><p class="lead">The guide says to know Cisco's real solution areas so your instincts are shaped by them. Do not pitch products on the call. Use them to decide what to ask.</p>
+<div class="g">${CSOL.map(c=>`<div class="c"><h3>${c[0]}</h3><small>${c[1]}</small></div>`).join('')}</div>
+<h3 style="margin:18px 0 4px">If Sam pushes back</h3>
+${OBJ.map(o=>`<details><summary><span>${o[0]}</span></summary><div class="in"><p class="ans">${o[1]}</p></div></details>`).join('')}
+<h3 style="margin:18px 0 4px">Good vs weak discovery</h3>
+<div class="g"><div class="c"><h3>Do</h3><ul><li>Open questions, what, how, why</li><li>Listen more than you talk</li><li>Follow up on what Sam says</li><li>Dig into why it matters and what it costs</li><li>Say "I don't know" when you do not</li></ul></div>
+<div class="c"><h3>Avoid</h3><ul><li>Jumping to products in the first few minutes</li><li>Pitching AI features Sam never asked about</li><li>Asking what basic research would have told you</li><li>Talking so much Sam never opens up</li></ul></div></div>
+<div class="c"><h3>What they score</h3><ul><li><b>Learning Agility:</b> how fast you get up to speed on Sam's world.</li><li><b>Earn the Second Meeting:</b> would Sam genuinely want to talk again?</li><li><b>Judgment with AI:</b> how you used AI to prepare, and how you help Sam tell real from hype.</li></ul></div>
+<h3 style="margin:18px 0 4px">Prepare with AI (they expect it)</h3>
+<div class="c"><p><small>They care about where you applied your own judgment on top of it. Use these, then write what you changed.</small></p>
+<p class="ans"><small id="rp1">Act as Sam Rivera, owner of a 12-shop coffee chain that grew from 3 shops in 3 years. You are busy, a little skeptical of vendors, curious but overwhelmed about AI, and not technical. I am a Cisco Associate Sales Rep on a 20-minute first call. Stay in character, answer briefly, reveal problems only if I ask good follow-up questions, and do not volunteer information. After 20 minutes, give me feedback on my listening, my follow-ups, and whether you would take a second meeting.</small></p>
+<button class="p" id="rc1">Copy Sam prompt</button>
+<p style="margin-top:12px" class="ans"><small id="rp2">List the 10 biggest operational, technology and customer experience challenges a 12-shop coffee chain growing to 20 shops would face, including two near college campuses. Then tell me which of those AI could realistically help and which is hype.</small></p>
+<button class="p" id="rc2">Copy research prompt</button></div>
+<div class="c"><h3>Say this in the feedback: how I used AI</h3><p class="ans">I used AI to research how a chain like Rivera Coffee runs and to draft discovery questions. <mark class="f">Name 2 questions AI gave you that you cut or rewrote, and why.</mark> <mark class="f">Name 1 thing AI got wrong or missed that you added yourself.</mark></p></div>
+<h3 style="margin:18px 0 4px">The 10-minute feedback</h3>
+<div class="c"><ul><li>Listen first. Do not defend.</li><li>Ask one clarifying question about what you could do better.</li><li>Say one specific thing you would change next time, then stop. Assessors may also ask this later, so have your answer ready.</li></ul></div>`,
 'Cisco':()=>`<h2>Cisco brief</h2><p class="lead">Keep this light. Cisco says no technical read-up is needed, but one sharp fact per answer earns credibility.</p>
 <div class="g"><div class="c"><h3>Where Cisco is now</h3><ul><li>FY26 revenue $63.3B, up 12%. Q4 was $17.25B, up 18%.</li><li>Hyperscaler AI infrastructure orders hit $9.3B in FY26, about 4.5x prior year. $7.5B of AI revenue is expected in FY27.</li><li>Cisco Live 2026 theme: AgenticOps and Cisco Cloud Control, with AI Defense for securing agents.</li></ul></div>
 <div class="c"><h3>UAE angle</h3><ul><li>Cisco signed on as a preferred technology partner for Stargate UAE (1 GW target, first 200 MW planned for 2026) with G42, OpenAI, Oracle, NVIDIA and SoftBank.</li><li>Say "signed on to provide networking, security and observability", not that it is already built.</li></ul></div></div>
@@ -203,6 +284,9 @@ $('#cv').onclick=e=>{const c=document.body.classList.toggle('cover');e.target.te
 $('#th').onclick=()=>{const r=document.documentElement,d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark'};
 let iv;$('#tm').onclick=()=>{clearInterval(iv);let n=120;const u=()=>{$('#tv').textContent=Math.floor(n/60)+':'+String(n%60).padStart(2,'0')};u();iv=setInterval(()=>{n--;u();if(n<=0){clearInterval(iv);$('#tv').textContent='Time. Land the Learning.'}},1000)};
 $('#cp').onclick=e=>{navigator.clipboard&&navigator.clipboard.writeText($('#pr').textContent);e.target.textContent='Copied'};
+
+let riv;$('#rtm').onclick=()=>{clearInterval(riv);let n=0;const u=()=>{let ph=PH[0];PH.forEach(p=>{if(n>=p[0])ph=p});$('#rtv').textContent=Math.floor(n/60)+':'+String(n%60).padStart(2,'0')+' / 20:00 · '+ph[1]};u();riv=setInterval(()=>{n++;u();if(n>=1200){clearInterval(riv);$('#rtv').textContent='Time. Move to feedback.'}},1000)};
+[['rc1','rp1'],['rc2','rp2']].forEach(a=>{$('#'+a[0]).onclick=e=>{navigator.clipboard&&navigator.clipboard.writeText($('#'+a[1]).textContent);e.target.textContent='Copied'}});
 let st={};try{st=JSON.parse(localStorage.getItem('csapCl')||'{}')}catch(e){}
 $('#cl').innerHTML=CL.map((t,i)=>`<div class="ck ${st[i]?'d':''}" data-i="${i}"><i>${st[i]?'✓':''}</i><span>${t}</span></div>`).join('');
 $('#cl').onclick=e=>{const d=e.target.closest('.ck');if(!d)return;const i=d.dataset.i;st[i]=!st[i];d.classList.toggle('d',st[i]);d.firstChild.textContent=st[i]?'✓':'';try{localStorage.setItem('csapCl',JSON.stringify(st))}catch(e){}};
