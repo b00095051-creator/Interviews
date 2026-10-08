@@ -1,400 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CSAP Assessment Centre: Interview Playbook</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<title>Oliver Wyman HR Interview Guide</title>
 <style>
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f3f6fa;--sf:#fff;--sf2:#e8eef6;--bd:#d3dce9;--tx:#0e1a2b;--mu:#586880;--ac:#0879ab;--S:#2f7de1;--T:#0f9d8a;--A:#d17f00;--R:#2e9e4f;--L:#8b5cf6;--rd:#d64545;--fl:#fff1b8}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#08101d;--sf:#0f1a2c;--sf2:#16243a;--bd:#22344f;--tx:#e6edf7;--mu:#8fa1ba;--ac:#3cc3f2;--S:#5a9bff;--T:#2cc7b1;--A:#f0a530;--R:#4cc46f;--L:#a785ff;--rd:#ff6b6b;--fl:#4a3d0c}}
-:root[data-theme=dark]{--bg:#08101d;--sf:#0f1a2c;--sf2:#16243a;--bd:#22344f;--tx:#e6edf7;--mu:#8fa1ba;--ac:#3cc3f2;--S:#5a9bff;--T:#2cc7b1;--A:#f0a530;--R:#4cc46f;--L:#a785ff;--rd:#ff6b6b;--fl:#4a3d0c}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px)}
-*{box-sizing:border-box;margin:0}
-body{background:var(--bg);color:var(--tx);font:16px/1.55 'Instrument Sans',system-ui,sans-serif}
-h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.15}
-.m{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}
-header{padding:28px 18px 22px;background:radial-gradient(90% 120% at 0 0,color-mix(in srgb,var(--ac) 22%,transparent),transparent 60%),var(--sf);border-bottom:1px solid var(--bd)}
-.w{max-width:860px;margin:auto}
-h1{font-size:clamp(28px,6vw,42px);font-weight:800;margin:6px 0 8px}
-h1 em{font-style:normal;color:var(--ac)}
-.bd{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.bd span,.bd button{font:500 11px 'JetBrains Mono',monospace;padding:4px 9px;border:1px solid var(--bd);border-radius:99px;background:var(--sf2);color:var(--tx);cursor:pointer}
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--sf);border-bottom:1px solid var(--bd);overflow-x:auto;white-space:nowrap}
-nav .w{display:flex}
-nav button{background:none;border:0;border-bottom:3px solid transparent;color:var(--mu);font:600 14px 'Instrument Sans',sans-serif;padding:14px 14px;cursor:pointer}
-nav button.on{color:var(--tx);border-color:var(--ac)}
-main{padding:22px 16px 70px}
-.s{display:none}.s.on{display:block}
-h2{font-size:26px;margin:4px 0 6px}
-.lead{color:var(--mu);margin-bottom:16px}
-.c{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:16px;margin:12px 0}
-.c h3{font-size:17px;margin-bottom:6px}
-.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-.g .c{margin:0}
-ul{padding-left:18px}li{margin:4px 0}
-.bar{display:flex;height:34px;border-radius:9px;overflow:hidden;margin:10px 0 4px;font:600 12px 'JetBrains Mono',monospace;color:#fff}
-.bar b{display:flex;align-items:center;justify-content:center}
-.k{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:7px;color:#fff;font:700 13px 'JetBrains Mono',monospace;margin-right:8px;flex:none}
-.S{--x:var(--S)}.T{--x:var(--T)}.A{--x:var(--A)}.R{--x:var(--R)}.L{--x:var(--L)}
-.k,.bar b{background:var(--x)}
-.row{display:flex;gap:2px;margin:8px 0;align-items:flex-start}
-.row div{flex:1}.row b{color:var(--x)}
-details{background:var(--sf);border:1px solid var(--bd);border-radius:14px;margin:10px 0}
-summary{cursor:pointer;padding:14px 16px;font-weight:600;list-style:none;display:flex;gap:10px;align-items:center;justify-content:space-between}
-summary::-webkit-details-marker{display:none}
-summary:after{content:'+';color:var(--ac);font-size:20px}
-details[open] summary:after{content:'-'}
-.in{padding:0 16px 16px}
-.tag{font:500 10px 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;padding:2px 7px;border-radius:5px;background:var(--sf2);color:var(--ac);margin-right:8px;white-space:nowrap}
-mark.f{background:var(--fl);color:var(--tx);padding:0 4px;border-radius:4px}
-.w2{border-left:3px solid var(--rd);padding:8px 12px;background:var(--sf2);border-radius:0 8px 8px 0;margin:10px 0;font-size:15px}
-.ok{border-color:var(--R)}
-.cover .ans{filter:blur(7px);cursor:pointer;user-select:none}.cover .ans.show{filter:none}
-button.p{background:var(--ac);color:#fff;border:0;border-radius:9px;padding:9px 14px;font:600 14px 'Instrument Sans',sans-serif;cursor:pointer}
-.ck{display:flex;gap:10px;padding:8px 0;cursor:pointer}
-.ck i{width:20px;height:20px;border:2px solid var(--bd);border-radius:6px;flex:none;display:grid;place-items:center;font-style:normal;font-size:13px;color:#fff}
-.ck.d i{background:var(--R);border-color:var(--R)}.ck.d span{opacity:.55;text-decoration:line-through}
-small{color:var(--mu)}
-</style>
-</head>
-<body>
-<header><div class="w">
-<div class="m">Assessment Centre · Associate Sales Representative · Interview + Role Play</div>
-<h1>Cisco CSAP, <em>STAR-L</em> Interview Playbook</h1>
-<div>Khaled Almuwahed · 30 minutes · Account Managers from Sales Enablement, Field Sales and Global Velocity Sales</div>
-<div class="bd"><span>INTERVIEW: STAR-L</span><span>ROLE PLAY: DISCOVERY</span><button id="th">Toggle theme</button><button id="cv">Cover mode: off</button></div>
-</div></header>
-<nav><div class="w" id="nav"></div></nav>
-<main><div class="w" id="app"></div></main>
+:root{--bg:#f5f7fa;--card:#fff;--ink:#14213d;--mut:#5a6577;--acc:#0b6e8a;--acc2:#e6f2f6;--line:#dde2ea;--warn:#fdf0e0;--wb:#c77d1a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1520;--card:#18212f;--ink:#e8edf5;--mut:#9aa6b8;--acc:#5cc3dd;--acc2:#16303a;--line:#2a3547;--warn:#2e2415;--wb:#e0a040}}
+:root[data-theme="dark"]{--bg:#0f1520;--card:#18212f;--ink:#e8edf5;--mut:#9aa6b8;--acc:#5cc3dd;--acc2:#16303a;--line:#2a3547;--warn:#2e2415;--wb:#e0a040}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{padding:20px 16px 8px;max-width:760px;margin:auto}
+h1{font-size:22px;margin:0 0 4px;line-height:1.25}
+.sub{color:var(--mut);font-size:14px;margin:0}
+nav{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;max-width:760px;margin:auto;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5}
+nav button{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 13px;border-radius:20px;font:inherit;font-size:14px;cursor:pointer}
+nav button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+main{max-width:760px;margin:auto;padding:4px 16px 40px}
+.tab{display:none}.tab.on{display:block}
+h2{font-size:18px;margin:18px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0}
+.call{background:var(--acc2);border-left:4px solid var(--acc);border-radius:8px;padding:12px;margin:12px 0}
+.warn{background:var(--warn);border-left:4px solid var(--wb);border-radius:8px;padding:12px;margin:12px 0}
+.pill{display:inline-block;background:var(--acc2);color:var(--acc);font-size:12px;font-weight:600;padding:2px 9px;border-radius:12px;margin-right:6px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:8px 0}
+summary{padding:12px 14px;cursor:pointer;font-weight:600}
+details>div{padding:0 14px 14px}
+p{margin:6px 0}ul{margin:6px 0;padding-left:20px}
+.m{color:var(--mut);font-size:14px}
+.cols{display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:600px){.cols{grid-template-columns:1fr 1fr}}
+label{display:block;padding:8px 0;border-bottom:1px solid var(--line)}
+label input{margin-right:10px;transform:scale(1.2)}
+label:has(input:checked){text-decoration:line-through;color:var(--mut)}
+</style></head><body>
+<header><h1>Oliver Wyman: HR Interview Guide</h1><p class="sub">Graduate Consultant, Dubai. Built for Khaled Almuwahed.</p></header>
+<nav id="nav"></nav>
+<main>
+
+<section class="tab" data-t="Brief">
+<h2>What this round is</h2>
+<div class="card"><p>You passed the online assessment. Next is a <b>video fit interview</b> with your webcam on throughout, then <b>4 to 5 case interviews</b>, each mixing a case with behavioral and CV questions. You hear after every round whether you advance. The fit interview covers your path (CV, skills, experience), role and team details, your motivation and interest in Oliver Wyman, and your questions at the end. It is a gate on <b>motivation, communication, structure, and fit</b>. Your stories will be reused in later rounds, so keep one consistent version of each.</p></div>
+<h2>What HR is scoring</h2>
+<ul><li><b>Why consulting, why Oliver Wyman, why Dubai.</b> Specific beats polished.</li>
+<li><b>Structured speaking.</b> Answer first, then support, under 2 minutes.</li>
+<li><b>Evidence of impact.</b> Numbers and decisions you changed.</li>
+<li><b>Staying power.</b> Will you stay and grow, or leave in 8 months?</li>
+<li><b>Posting language.</b> Initiative, intuition, creativity, an analytical mindset, and an impactful life outside your studies. Have one story for each.</li>
+<li><b>Arabic.</b> Listed as an advantage. Say it once, tied to clients across the Gulf region.</li></ul>
+<div class="call"><b>The thread through your story:</b> you find where things waste time or money, fix them with data, and own the work from start to finish. Procter &amp; Gamble is the proof: 27% lower expiry and disposal cost and 80% less reporting and approval time.</div>
+<h2>Quick formats</h2>
+<p class="m"><b>Stories:</b> set the scene, say your task, say what you did, then give the result. <b>Opinions:</b> answer first, give a reason, then an example, then repeat the answer in one line. <b>Why this firm:</b> start broad with the industry, then the firm, then the role, then you.</p>
+</section>
+
+<section class="tab" data-t="Intro">
+<h2>Tell me about yourself</h2>
+<p class="m">Say it in your own words. About three minutes at a relaxed pace, in five parts: opening, experience, consulting, SAP, and why Oliver Wyman.</p>
+<div class="card"><p><span class="pill">Opening</span>Thank you very much for taking the time to conduct this interview. I'm glad to be here. My name is Khaled Almuwahed, and I recently graduated from the American University of Sharjah with a bachelor's degree in industrial engineering. My degree gave me a strong background in data analysis and process improvement, and I've learned just as much, and built a lot of practical skills, through my internships.</p>
+<p><span class="pill">Experience</span>At Procter &amp; Gamble, I redesigned how inventory targets were set for distributors and automated the planning process. That cut expiry and disposal costs by 27% and reduced reporting and approval time by 80%. I'm proud of that project, and I built a dashboard so the whole team could follow the results.</p>
+<p><span class="pill">Consulting</span>I also worked part-time as a consultant at 180 Degrees Consulting, on two projects. The first was a pricing strategy for an online QR menu platform. The second was a market sizing project for a professional social media platform, similar to LinkedIn, built for students in their final two years of high school and for university students in the UAE. I really enjoyed my time as a consultant, especially the customer-facing side.</p>
+<p><span class="pill">SAP</span>Since May, I've been interning at SAP, which is actually right across the street from Oliver Wyman here in Dubai. My role is in global sales strategy for business transformation management, within the Chief Revenue Office. I work on slides with our Chief Revenue Officer for his presentations to the board, and I build presentations for the sales team. Right now I'm doing the analysis and presentation for setting the budget for each of our solution areas for 2027, working closely with one of our sub-solution Chief Revenue Officers, and that budget has to be backed by the numbers and by market research. I'm also heavily involved in go-to-market planning and in setting our sales priorities for 2027.</p>
+<p><span class="pill">Why Oliver Wyman</span>That's a big part of why Oliver Wyman appeals to me. The firm is known for its depth in financial services and risk management, and for helping clients make decisions that are backed by the numbers. That's what I enjoy most, and it's what I'm doing right now with the SAP budget analysis. I'm also drawn to how the firm describes its culture: graduates are encouraged to take initiative from day one, and success is measured by the difference made for clients, not just the deliverable. At Procter &amp; Gamble and now at SAP, what I've valued most is owning a piece of work from start to finish. Oliver Wyman is a place where I could do that across a range of clients, and I'd be really excited to grow here.</p></div>
+<div class="call"><b>Delivery:</b> Aim for about three minutes. If you run long, trim the 180 Degrees Consulting details first. Slow down on the 27%, say full names out loud, and stop at the end and let them take over. On video, keep the camera at eye level and look at the lens on the key numbers.</div>
+</section>
+
+<section class="tab" data-t="Questions">
+<h2>Likely questions</h2>
+<p class="m">Tap a question to open it. Say each answer in your own words. Anything in [brackets] needs a real detail from you, because I only know what is on your résumé.</p>
+<details><summary>1. Why consulting?</summary><div><span class="pill">Tell it as a short story</span><p class="m">Is this a real choice, or a prestige pick?</p>
+<p>I want to work on different business problems and use data to help clients decide what to do. At 180 Degrees Consulting I worked on a pricing strategy and a market sizing project, and what I enjoyed most was the customer-facing side. At SAP I'm seeing how numbers and market research drive big decisions, like next year's budget. Consulting lets me do that for many clients, and a graduate role at Oliver Wyman lets me start now.</p>
+<p class="m"><b>Note:</b> Skip lines like "variety and a steep learning curve" with no story behind them.</p></div></details>
+<details><summary>2. Why Oliver Wyman, and why not another firm?</summary><div><span class="pill">Broad to specific</span><p class="m">Did you do real research, and can you be specific?</p>
+<p>Two things stand out to me. Oliver Wyman is known for its depth in financial services and risk management, and I like that kind of focus. And the firm is putting real effort into AI. It recently named a Chief AI and Data Officer, and at SAP I've been helping our Chief Revenue Office adopt AI, so I'd love to learn how that works on actual client projects. On a practical level, I live in Dubai, I speak Arabic and English, and I know the Dubai office is growing. [Add one thing you learned from talking to someone at Oliver Wyman.]</p>
+<p class="m"><b>Note:</b> Pick your hooks from The firm tab. If you can, talk to one person at Oliver Wyman before the interview.</p>
+</div></details>
+<details><summary>3. Walk me through your Procter &amp; Gamble project.</summary><div><span class="pill">Short story</span><p class="m">Do you own your results, and can you explain the numbers?</p>
+<p>I was a supply network operations intern at Procter &amp; Gamble. I redesigned how inventory targets were set for distributors, then automated the whole planning process. I also built a Power BI dashboard with automatic email alerts through Power Automate, so everyone involved could see what was happening. Expiry and disposal costs dropped 27%, and reporting and approval time dropped 80%. I also built a central catalogue of internal tools in Power Apps, so teams could find and use them more easily. [Add who you presented it to and what happened next.]</p>
+<p class="m"><b>Note:</b> Say "I", not "we". Be ready to explain how the 27% was measured, and what you did yourself versus what the team did.</p></div></details>
+<details><summary>4. Tell me about a time you influenced senior people.</summary><div><span class="pill">Short story</span><p class="m">Can you hold your own with executives at 22?</p>
+<p>I was the Chief Financial Officer of my team, Rahatak, in the INJAZ National Competition. I led six people over five months, did the market research, and wrote the feasibility study for our business model. At the end we pitched to senior leaders from Mashreq, Visa and TotalEnergies, and I took questions from executives and advisors from EY. [Add how you prepared for the hard questions and how the competition ended.]</p>
+</div></details>
+<details><summary>5. Describe a time you hit an obstacle.</summary><div><span class="pill">Short story</span><p class="m">Do you stay calm and find a way around it, without blaming anyone?</p>
+<p>As Chief Financial Officer of Rahatak in the INJAZ National Competition, I had to build a feasibility study for our business model while leading a cross-functional team of six over five months. [Say what the real obstacle was, for example a number that didn't work, a disagreement in the team, or a tight deadline.] [Say what you did about it.] In the end we had a feasibility study we could stand behind when we pitched to senior leaders from Mashreq, Visa and TotalEnergies. [Add what changed because of how you handled it.]</p>
+<p class="m"><b>Note:</b> Question 4 covers the pitch itself, so focus here on the building phase, before the pitch.</p></div></details>
+<details><summary>6. Tell me about a conflict or a failure.</summary><div><span class="pill">Short story, plus what you learned</span><p class="m">Are you self-aware? Interviewers can tell when a failure is fake.</p>
+<p>Choose a real story from 180 Degrees Consulting, the Noon Minutes project, or Procter &amp; Gamble. Say what went wrong, what you did about it, and what you do differently now. Then give one example of that change in action.</p>
+<p class="m"><b>Note:</b> Avoid "my weakness is perfectionism" and failures that cost nothing.</p>
+</div></details>
+<details><summary>7. How do you handle ambiguity or pressure?</summary><div><span class="pill">Short story</span><p class="m">Are you comfortable when the path is unclear?</p>
+<p>At SAP, I ran a global workshop that used AI tools. [Say what was unclear at the start and what you did about it.] Afterward I wrote a standard operating procedure for future workshops in our Business Transformation Management group, so the format could be reused.</p>
+<p class="m"><b>Note:</b> The résumé only gives the outline here. Fill in the real details.</p>
+</div></details>
+<details><summary>8. What is your view on AI in consulting?</summary><div><span class="pill">Opinion: answer, reason, example</span><p class="m">Do you have good commercial judgment? Your SAP work makes this a strength.</p>
+<p>I think AI will handle more and more of the first draft, like research summaries and early models. That shifts the value toward asking the right question, judging whether an answer makes sense, and earning the client's trust. At SAP I've helped our Chief Revenue Office adopt AI, including dashboards and small apps built with AI coding tools. [Add one real example of AI output you had to check or correct.] I think the best junior consultants will use AI fast and still question what it gives them.</p>
+</div></details>
+<details><summary>9. What is your biggest weakness?</summary><div><span class="pill">Opinion</span><p class="m">Can you name a real weakness and show you are working on it?</p>
+<p>Pick a real one. Only if it is true, you could say: "I tend to jump straight into building something. These days I stop first and ask what question we're really answering, and whether a simple answer would do."</p>
+</div></details>
+<details><summary>10. Where do you see yourself in five years? How long will you stay?</summary><div><span class="pill">Opinion</span><p class="m">This is a trap about commitment.</p>
+<p>I'd like to become a strong consultant first. Structuring problems and advising executives takes years of practice, and in a couple of years I'd like to be running parts of projects myself. I'm planning on a long stay at Oliver Wyman.</p>
+<p class="m"><b>Note:</b> Never promise to stay forever. Describe a believable multi-year path instead.</p></div></details>
+<details><summary>11. Why Dubai and not Doha?</summary><div><span class="pill">Opinion</span><p class="m">The posting lists both offices, so is Dubai a real choice?</p>
+<p>I'm based in Dubai, and it's where I've built my experience. My internship at Procter &amp; Gamble, my work with 180 Degrees Consulting, and my current role at SAP were all here. I speak Arabic and English, which helps with regional clients. [Only if it's true: I'm also open to travel, including projects in Qatar.]</p>
+<p class="m"><b>Note:</b> Don't make Doha sound like the backup, and don't promise to relocate unless you mean it.</p></div></details>
+<details><summary>12. Tell me about something impactful outside your studies.</summary><div><span class="pill">Short story</span><p class="m">The posting asks for an interesting life outside academics.</p>
+<p>In December 2024 I went to Tamale, Ghana, as an international volunteer leader with Sharjah Charity International. I led workshops that helped students build confidence and problem-solving skills, and I helped coordinate community projects around education and sustainability. [Add one thing you saw change in the students or the projects.]</p>
+</div></details>
+<details><summary>13. Salary, notice period, and availability.</summary><div><span class="pill">Logistics</span><p class="m">Are you realistic and easy to work with?</p>
+<p>I'd like to hear the range for this role first, and I'm confident we can land somewhere that works for both of us. I'm available from [your earliest start date].</p>
+<p class="m"><b>Note:</b> Know your SAP internship end date and your earliest start date before the call.</p>
+</div></details>
+</section>
+
+<section class="tab" data-t="Recruiter">
+<h2>Lerato Mosella</h2>
+<div class="card"><p>Recruiting Coordinator for Oliver Wyman India, Middle East and Africa entry-level and experienced hires, since July 2025. Before that: Talent Acquisition Administrator at Anglo American, and Human Capital intern at South African Tourism. Degrees in Human Resource Management (Bachelor of Arts and Honours) from the University of Johannesburg. Based in Johannesburg.</p></div>
+<div class="warn"><b>Check first:</b> a coordinator is not necessarily your interviewer. The email says your interviewer will discuss the role and team, which may be a consultant. Treat her as the person running your process either way. How you communicate with her is visible before any interview starts.</div>
+<h2>What her background suggests</h2>
+<ul><li><b>Structured and rubric-based.</b> Name the competency in your answer ("on leadership, here is an example") and keep answers under 2 minutes.</li>
+<li><b>Hears many "why consulting" answers.</b> Specifics and numbers separate you.</li>
+<li><b>Consistency checks.</b> Your CV, cover letter, transcripts, and spoken answers must match.</li>
+<li><b>Logistics matter.</b> Know your availability, SAP end date, and notice period. Your Golden Visa makes work authorization easy to state.</li>
+<li><b>Reliability.</b> Reply to scheduling emails the same day, in two or three clear lines.</li></ul>
+<div class="call"><b>Time zone:</b> Johannesburg is two hours behind Dubai. When you pick a slot, write the time with both time zones to avoid a mix-up.</div>
+<p class="m">Do not reference her career history unless she raises it. A short thank-you for coordinating is enough.</p>
+</section>
+
+<section class="tab" data-t="The firm">
+<h2>The 30-second version</h2>
+<div class="card"><p>Founded in New York in 1984 by former Booz Allen consultants who bet on specializing in one industry (financial services) while rivals stayed generalist. Marsh &amp; McLennan acquired it in 2003, and it has traded as Oliver Wyman since 2007. Today the name is <b>"Oliver Wyman, a Marsh business"</b>: the parent rebranded to Marsh in January 2026, and the consulting unit is now Marsh Management Consulting. Roughly 70+ offices worldwide.</p></div>
+<h2>Known for</h2>
+<p><b>Risk and financial services are the core.</b> Finance and Risk is described as the largest specialized practice inside Banking &amp; Financial Services and the cornerstone of the firm's reputation. Its work for banks includes risk, capital, liquidity, strategic planning, and financial resource management. So it is financial services and risk, not personal financial planning. The firm also covers health, transport and aviation, energy, consumer and retail, public sector, digital, and sustainability. Your posting is a general graduate role across industries, so present financial services and risk as the firm's strength, not as your assumed team. Reading one Oliver Wyman report is easy homework.</p>
+<h2>What changed in 2026</h2>
+<ul><li><b>Jan:</b> parent company rebrands from Marsh McLennan to Marsh.</li>
+<li><b>1 Apr:</b> Ted Moynihan becomes CEO of Oliver Wyman and Marsh Management Consulting.</li>
+<li><b>Apr:</b> Mona Hammami named Head of the UAE business.</li>
+<li><b>May:</b> new Chief AI and Data Officer to build a delivery model that blends people with agentic AI, plus a new Global Chief Operating Officer and Chief of Staff.</li>
+<li><b>May:</b> agreed to acquire CR3 Partners, a turnaround consultancy.</li></ul>
+<h2>In the Middle East</h2>
+<ul><li>UAE offices in Dubai and Abu Dhabi, a Riyadh office, and your posting also lists Doha.</li>
+<li>Leadership says the UAE is a market where Oliver Wyman is accelerating growth.</li>
+<li>Recent regional research: Dubai ranked among top cities for growth, and the UAE placed in the top 10 on an Industry 5.0 resilience index.</li>
+<li>Oliver Wyman partnered with INJAZ UAE in 2018, with a partner joining its board.</li></ul>
+<h2>Hooks that show homework</h2>
+<div class="call"><p><b>AI.</b> "I saw Oliver Wyman appointed a Chief AI and Data Officer to build a delivery model that blends people with agentic AI. At SAP's Chief Revenue Office I drove AI adoption and ran an AI-powered workshop, so I want to learn how that works on real engagements."</p></div>
+<div class="call"><p><b>UAE growth.</b> "With new UAE leadership and an expansion push, I'd like to join while the Dubai office is growing."</p></div>
+<div class="call"><p><b>INJAZ.</b> "I noticed Oliver Wyman has partnered with INJAZ UAE, which runs the competition where I pitched as Rahatak's CFO." Confirm the partnership is still active before using this.</p></div>
+<div class="call"><p><b>Finance and planning.</b> "Oliver Wyman helps financial institutions with risk and strategic planning. The budget analysis I'm building at SAP is the kind of numbers-led planning I want to do more of."</p></div>
+<p class="m">Use two hooks at most. Do not recite headlines. Say what it means for you.</p>
+<h2>From the posting</h2>
+<p>Research and data gathering, surveys and interviews, hypothesis testing, and client-ready presentations and workshops. You can specialize early or explore first, with a buddy, a career advisor, and a talent manager. No specific major is required. Reports mention cases without a calculator, so practice mental math.</p>
+<p class="m">Sources: oliverwyman.com, Business Insurance, Consultancy Middle East, Consulting.us, Management Consulted. News moves, so recheck Oliver Wyman's site the morning of.</p>
+</section>
+
+<section class="tab" data-t="Risks">
+<h2>Gaps and how to handle them</h2>
+<div class="cols"><div class="warn"><b>Risk:</b> No full-time consulting firm experience.</div><div class="call"><b>Handle:</b> Lead with the two 180 Degrees Consulting projects, and say you enjoyed the customer-facing side.</div></div>
+<div class="cols"><div class="warn"><b>Risk:</b> Your background spans industrial engineering, supply chain, and SAP's sales strategy, so "why consulting?"</div><div class="call"><b>Handle:</b> The thread is analyzing a business problem with data and recommending what to do.</div></div>
+<div class="cols"><div class="warn"><b>Risk:</b> Cumulative GPA of 3.51 may be benchmarked, and transcripts are part of the application.</div><div class="call"><b>Handle:</b> Mention your 3.82 major GPA and Chancellor's List naturally. Never hide the cumulative GPA.</div></div>
+<div class="cols"><div class="warn"><b>Risk:</b> Interviewers worry that graduates leave early.</div><div class="call"><b>Handle:</b> Describe a believable multi-year path at Oliver Wyman.</div></div>
+<div class="cols"><div class="warn"><b>Risk:</b> Résumé typo: "rolling of new AI powered tools".</div><div class="call"><b>Handle:</b> Fix to "rolling out", and fix "MGPA" to "Major GPA", before any resubmission.</div></div>
+<h2>Questions to ask</h2>
+<ul><li>How are graduates staffed in the first six months, and how soon are they client-facing?</li>
+<li>What training do new analysts get on modeling and structuring?</li>
+<li>How do new graduates decide between specializing early and exploring, and what does that look like in Dubai?</li>
+<li>Oliver Wyman named a Chief AI and Data Officer this year. How is that changing day-to-day work for new analysts?</li>
+<li>How is the Dubai office evolving with the UAE expansion, and what does that mean for graduates?</li>
+<li>In the case rounds, how are the case and the behavioral parts split, and is a calculator allowed?</li></ul>
+<p class="m"><b>Never ask:</b> pay or perks first, anything on the homepage, or how soon you can be promoted.</p>
+</section>
+
+<section class="tab" data-t="Checklist">
+<h2>Before the interview</h2>
+<label><input type="checkbox">Watch your inbox and spam for the scheduling email, then confirm interviewer name and length</label>
+<label><input type="checkbox">Confirm SAP end date and earliest start date</label>
+<label><input type="checkbox">Fix résumé typos</label>
+<label><input type="checkbox">Reread your submitted cover letter so every story matches it</label>
+<label><input type="checkbox">Read Oliver Wyman's official entry-level interview preparation page</label>
+<label><input type="checkbox">Say the intro aloud 3 times and time it, then trim to fit</label>
+<label><input type="checkbox">Fill every [bracket] with a true detail</label>
+<label><input type="checkbox">Talk to one Oliver Wyman consultant or alum, note one specific detail</label>
+<label><input type="checkbox">Read one recent Oliver Wyman Middle East report and form a view</label>
+<label><input type="checkbox">Keep a one-page story log so details stay identical across 4 to 5 interviews</label>
+<label><input type="checkbox">15 minutes of mental math a day for the case rounds</label>
+<label><input type="checkbox">Prepare 3 questions to ask</label>
+<label><input type="checkbox">Test webcam and internet, quiet room, video on throughout, water, résumé copy</label>
+</section>
+</main>
 <script>
-const $=s=>document.querySelector(s);
-const f=t=>t.replace(/\[\[(.+?)\]\]/g,'<mark class="f">$1</mark>');
-const KEYS={S:'Situation',T:'Task',A:'Action',R:'Result',L:'Learning'};
-const row=o=>Object.keys(KEYS).filter(k=>o[k]).map(k=>`<div class="row ${k}"><span class="k">${k}</span><div><b>${KEYS[k]}:</b> <span class="ans">${f(o[k])}</span></div></div>`).join('');
-
-const STORIES=[
-{n:'P&G: automated the reporting, then sold it',t:'Ownership · influence · results',
- S:'P&G Supply Network Operations. Disposal cost reporting was manual, slow and error-prone.',
- T:'I owned fixing it and getting senior leadership to adopt it, [[no one asked me to; say who set the goal]].',
- A:'I rebuilt the process in Power BI and Power Automate, end to end. [[Name 1 failed attempt you fixed]]. Then I presented it to senior leadership in terms of disposal cost, not tooling.',
- R:'Reporting time down 80%. It fed a project that delivered a 27% disposal cost reduction, and I was the first intern to have a project folded into the next fiscal year strategy.',
- L:'[[One line, true to you. Draft: a fix only lands when it is framed around the decision-maker\'s number, so I now open with their metric.]]'},
-{n:'Rahatak: CFO in the INJAZ National Competition',t:'Pressure · pitching · numbers',
- S:'INJAZ National Competition. As CFO of Rahatak, we built autonomous airport wheelchairs, an accessibility solution, and had to pitch it to the CFO of Visa, the CEO of TotalEnergies and partners from EY.',
- T:'I had to make three very different senior people care enough to back it. [[Add your exact role on the pitch: financials, Q&A on numbers?]]',
- A:'I tailored the language to each person. For the CFO I spoke in finance: [[name 1 number or metric you used]]. For the others I made it personal: I asked them to picture a parent, grandparent or loved one struggling to get through an airport. [[Add how you prepared or handled one tough question.]]',
- R:'[[Placement, judge feedback, or a concrete reaction from one of the leaders.]]',
- L:'Facts convince, but people act on what they feel, so I now decide before every pitch what each listener personally cares about. [[Adjust to your own words.]]'},
-{n:'Noon Minutes: dark store operations project',t:'Problem-solving · real client · tradeoffs',
- S:'Senior design project with Noon Minutes on dark store operations optimization, Aug 2025 to Apr 2026.',
- T:'[[Your slice of the project, and the constraint or deadline.]]',
- A:'[[The analysis you ran, the disagreement or obstacle you handled, how you presented it to Noon.]]',
- R:'[[Metric: pick time, throughput, cost, or adoption.]]',
- L:'[[What real operations taught you that a classroom model did not.]]'},
-{n:'Ghana: logistics owner in Tamale',t:'Ownership · logistics · reliability',
- S:'International volunteer trip with Sharjah Charity International to Tamale, Ghana, Dec 2024, where I was a volunteer leader.',
- T:'We volunteered to renovate schools and rebuild critical infrastructure in the poorest town. I owned all logistics and had to make sure every material arrived on time.',
- A:'[[List 3 things you did: how you planned orders, tracked deliveries, and fixed one delay or shortage.]]',
- R:'[[What was renovated or rebuilt, and how many students or residents it served. Even one number helps.]]',
- L:'[[Draft: on-site work only moves as fast as the slowest missing material, so I now plan backwards from the work date and confirm each delivery early.]]'},
-{n:'SAP CRO: learning fast and building with AI',t:'Learning agility · judgment with AI',
- S:'Global Sales Strategy for Business Transformation Management intern in SAP\'s Chief Revenue Office, since May 2026. Unfamiliar domain.',
- T:'[[The task you were given and by when.]]',
- A:'I completed SAP\'s end-to-end business process learning before day one, then built multi-agent workflows with Claude Code. [[Name the moment AI got something wrong and how you caught it.]]',
- R:'[[Time saved, decision enabled, or who now uses it.]]',
- L:'AI drafts fast, I own the checking. [[Add your own rule.]]'},
-{n:'P&G: winning over category leaders who said no',t:'Influence · disagreement · things not going to plan',
- S:'At P&G I had built an automated reporting solution, but the different category leaders initially rejected it. They wanted the work kept manual to cover their own needs.',
- T:'Without any authority over them, I had to get each leader to trust the solution, or it would never scale.',
- A:'Each leader came from a different background with different needs, so I did not pitch one version. [[Name what you did: 1-to-1 conversations, asking what manual work protected, adding their requirement into the automation.]] Then I took the combined solution to senior leadership.',
- R:'The leaders came around and the solution cut reporting time 80% and fed the 27% disposal cost reduction. [[Add how many leaders you won over.]]',
- L:'A rejection is usually an unmet need in disguise, so I now ask what a stakeholder is protecting before I defend my solution.'}
-];
-
-
-const SOL=[
-{tag:'Solution 1',n:'Cisco AI Infrastructure',one:'Cisco page: "Securely scale AI." Networking, security, observability and AI-native tools.',
- plain:`AI programs need huge computing power and very fast, safe connections between the computers doing the work. Cisco does not make the AI apps. It makes the roads and security gates the data travels on, so AI runs quickly and safely.`,
- get:['Very fast networking inside data centers, where AI runs','Security that protects AI models and AI agents from misuse','Tools that watch everything and spot problems early','Ready-made designs built with Nvidia, so customers do not have to work it out themselves'],
- sam:`Sam would never buy this. It is for giant customers such as cloud companies. It still matters on the call because it shows Cisco is the company that makes AI run reliably and safely, and the same idea applies at Sam's size: AI is only as good as the connection and security underneath. Do not mention data centers to Sam.`,
- p:'Companies want to run AI but the network, security and operations underneath it are not built for the load, and AI agents can exploit gaps.',
- w:'AI spending is real: Cisco took $9.3B of hyperscaler AI orders in FY26 and expects AI traffic on networks to triple in three years.',
- d:'One stack covering networking, security and observability, instead of buying and stitching them together separately.',
- c:'CIOs, CTOs, data center owners, and the CFO who signs off the AI budget.',
- k:'AI Networking, Secure AI Factory, Silicon One, Cisco Cloud Control and AI Canvas (AgenticOps), AI Defense, Splunk Observability, Cisco IQ.',
- l:'AI only pays back if the network under it does not become the bottleneck or the breach, and Cisco is one of the few vendors selling all three layers together.'},
-{tag:'Solution 2',n:'Cisco Secure Networking',one:'Cisco page: "Defense starts with the network." Build security into the network to stop and contain threats faster.',
- plain:`Instead of bolting a separate security product onto a network, Cisco builds protection into the network itself, so every device and connection is checked and threats are contained fast. Picture a building where every door has a lock and a guard, not just the front gate.`,
- get:['Firewalls: a security guard for the network','Identity checks so only the right people and devices get in (Cisco Duo asks for a second proof, like a phone prompt)','Web protection that blocks dangerous sites (Cisco Umbrella)','One place to set security rules for every site','Security updates applied without shutting things down'],
- sam:`Sam takes card payments and holds customer data across 12 shops with only an outside contractor. This is the answer to "who is protecting that, and what happens if something goes wrong?" Practically: guest Wi-Fi kept separate from the payment network, a second check on staff logins, and risky websites blocked at every shop.`,
- p:'Attackers move faster than people can respond, and devices and software agents now outnumber humans on networks.',
- w:'Cisco says quantum threats already put stolen data at risk, and it committed to quantum-safe capabilities across most of its core portfolio by December 2026.',
- d:'Security lives inside the network itself and is managed with one policy through Cisco Cloud Control. Live Protect patches at runtime with no reboot.',
- c:'CISOs and security teams, network leaders, and boards worried about breach cost and downtime.',
- k:'Live Protect, zero-trust identity for devices and agents, post-quantum encryption, Hybrid Mesh Firewall, Splunk Enterprise Security, Duo, Umbrella.',
- l:'A breach costs far more than prevention, and putting security into the network means it works at the speed attackers do.'},
-{tag:'Solution 3',n:'Cisco Future-Proofed Workplaces',one:'Cisco page: "Modernize how business happens, everywhere it happens."',
- plain:`Everything that makes a physical place run smoothly: Wi-Fi, the network, security, cameras and sensors, and team calls and meetings, all managed together from one screen. "Workplace" includes shops and branches, not just offices.`,
- get:['Wi-Fi and network equipment managed remotely from the cloud (Cisco Meraki)','Secure links joining all sites into one network (SD-WAN)','Smart cameras and sensors, for example counting how busy a shop is','Team calling, messaging and video meetings (Webex)'],
- sam:`The closest fit to Sam's day to day: 12 shops each set up differently and a contractor who only comes when something breaks. One dashboard shows every shop, a new shop can be plugged in without a specialist visit, and many problems can be spotted and fixed remotely. This is the most relevant of the three.`,
- p:'IT, HR and facilities misaligned, inconsistent experiences across sites, more threats at distributed locations, and rising demand from AI and connected devices.',
- w:'Hybrid work is permanent, connected devices keep growing, and Cisco reported its best collaboration quarter in seven years in Q4 FY26.',
- d:'Only Cisco unifies networking, security, observability and collaboration with AI built in, on one platform that builds value over time.',
- c:'COOs, IT and facilities heads, and multi-site owners in retail, hospitality and offices who want a better experience at lower cost.',
- k:'Wi-Fi and switching, Catalyst SD-WAN, SASE, Zero Trust Access, smart buildings, Webex devices and AI, user protection.',
- l:'Every site, from head office to branch, gets the same secure, simple experience, and savings show up in energy, space and IT time.'}
-];
-
-const TM=[
-['STAGE 1 · MACRO','Who I am and the pattern','I\'m Khaled, an industrial engineering graduate from the American University of Sharjah, based in Dubai. Across my projects, what pulled me in was never the model itself. It was the commercial problem, and then standing up to present the fix.'],
-['STAGE 2 · FOCUSED','Proof I can sell a solution','At P&G, I built an automated reporting solution in Power BI and Power Automate, and had to sell it to category leaders who first rejected it. It cut reporting time [[80%]], fed a [[27%]] disposal cost reduction, and I was the first intern to have a project folded into the next fiscal year strategy. At Rahatak, I pitched our autonomous airport wheelchairs to the CFO of Visa, the CEO of TotalEnergies and partners from EY, using finance for the CFO and personal stories for the rest.'],
-['STAGE 2 · FOCUSED','What I do now','Since May, I have been in SAP\'s Chief Revenue Office. I see go-to-market strategy from the top, and I have been building multi-agent AI workflows with Claude Code. What I keep noticing is that I want to own the customer conversation, not just the plan.'],
-['STAGE 3 · CONNECTION','Why Cisco, why CSAP, why now','Cisco took [[$9.3B]] of hyperscaler AI orders last year and is a preferred technology partner in Stargate UAE, because AI runs on networking and security. CSAP is where I learn that portfolio and get a real number to carry, and I want to bring that back to this region.']
-];
-const tmayHTML=()=>TM.map(b=>`<div class="c"><div class="m">${b[0]} · ${b[1]}</div><p class="ans" style="margin-top:6px">${f(b[2])}</p></div>`).join('')+`<div class="w2 ok"><b>Delivery:</b> about 2 minutes. Slow down on the numbers and land the last sentence on Cisco by name. On video, look at the lens for Stage 3.</div>`;
-const PH=[
-[0,'Open','2 min','Set the frame, ask permission, promise no pitch.',`"Thanks for making time, Sam. I know you're busy and probably get plenty of vendor calls. I won't pitch anything today. I'd like to learn how Rivera Coffee runs and what's getting in the way, and then we can decide together if another chat is worth your time. Does that sound fair?"`],
-[120,'Their story','3 min','Get Sam talking about the growth. Pride first, problems second.',`"How did you get from 3 shops to 12 in three years?" then "What got harder along the way?"`],
-[300,'Dig','8 min','Find the real problem underneath, and what it costs. Follow Sam, not your list.',`"Tell me more about that." "Why does that matter?" "What is that costing you?" "What have you tried?"`],
-[780,'The AI angle','4 min','Explore what Sam has heard, where it could help, and where it is noise. Do not pitch.',`"You mentioned AI. What have you been hearing, and what made you curious?"`],
-[1020,'Play it back','2 min','Summarise in Sam\'s words and check you got it right.',`"Here's what I heard: growth outran the back office, you are the bottleneck on decisions, and you want to know where AI is real. Did I miss anything?"`],
-[1140,'Earn the second meeting','1 min','Ask for a small, specific next step tied to what Sam said.',`"Would 30 minutes next week work? I'll bring a short view on [their top issue], and a colleague from our technical team if it helps. Which day suits you?"`]
-];
-const RQ=[
-['Growth and the back office',[
- ['How did you get from 3 shops to 12 in three years?','What got harder as you grew?','What did that cost you in time or money?'],
- ['How do the shops run behind the counter day to day? Ordering, payments, scheduling, Wi-Fi?','Who fixes things when they break?','What happens at a busy campus shop at 8am if the systems go down?'],
- ['Which decisions still come to you that you wish did not?','What would you do with that time instead?']]],
-['Customer experience',[
- ['What do your regulars love most about the shops?','What would put that at risk as you grow?'],
- ['How do peak times feel, especially near the campuses?','What do customers complain about, and how do you find out?'],
- ['Do customers use Wi-Fi, mobile ordering or a loyalty app today?','How is that working across all 12 shops?']]],
-['Data, payments and consistency',[
- ['How do you feel about customer and payment data across 12 locations?','Who looks after it today?'],
- ['Does every shop run the same way, or is each a little different?','What does that inconsistency cost you?']]],
-['The future',[
- ['What has to be true for you to reach 20 shops?','What worries you most about getting there?'],
- ['If we spoke in six months and this had gone well, what would be different?']]],
-['AI (the heart of the scenario)',[
- ['What have you been hearing about AI for a business like yours?','What made you curious about it?'],
- ['Where do you feel stuck or overwhelmed when it comes to AI?','What have you tried, if anything?'],
- ['If AI worked perfectly, what is the first problem you would want it to fix?','How would you know it was worth the money?']]]
-];
-const HYPE=[
-['Where it could help (explore, do not assert)','Predicting busy periods for staffing and stock, cutting admin and reporting time, faster answers to customer questions, and spotting problems across shops earlier.'],
-['Where it is mostly noise for a business this size','Big custom AI platforms, replacing the human warmth Sam is proud of, and "AI everything" before the basics like a reliable network and clean data are in place.'],
-['The honest line to say','"AI only helps if it solves a real problem. Let\'s find the problem first, and then see whether AI is even the right tool."']
-];
-const CSOL=[
-['Network reliability','A patchwork of systems and an outside IT contractor point to a fragile, hard-to-see network. Ask about downtime, not products.'],
-['Security','Payment and customer data across 12 sites. Ask who is responsible and what happens after a breach.'],
-['Guest and customer experience','Guest Wi-Fi, mobile ordering and peak-time lines, especially near campuses.'],
-['Collaboration','Keeping shop managers and Sam connected as the chain grows toward 20.']
-];
-const OBJ=[
-[`"I get vendor calls all the time."`,`"Fair enough. I'm not here to pitch. If this isn't useful after 20 minutes, we stop."`],
-[`"I'm really busy."`,`"Understood, and that is exactly what I would like to hear more about. What is taking most of your time?"`],
-[`"AI sounds like hype."`,`"A lot of it is, honestly. What would make something worth your time?"`],
-[`"Just send me a brochure. What does it cost?"`,`"Happy to. The right answer depends on what you actually need, so can I ask two questions first?"`],
-[`"I already have an IT guy."`,`"How is that working out? What happens when something breaks at a busy time?"`],
-[`You do not know the answer`,`"I don't know that yet. Let me find out and bring it to our next conversation."`]
-];
-
-const STRUG=[
-['Systems that do not talk to each other',`Each shop was opened as its own project. One till system here, a different scheduling tool there, spreadsheets in between. To see how the whole chain did last week, someone adds numbers up by hand.`,`Sam cannot see all 12 shops at once, finds out about problems late, and every new shop adds more mess.`,`"If you wanted to know how all 12 shops did last week, how would you find out?"`],
-['Things breaking at the worst moment',`The Wi-Fi, card machines or ordering system go down at 8am near a campus. Sam relies on an outside contractor who visits when something breaks, so the fix can take hours or days.`,`Lost sales at the busiest time, frustrated regulars, and Sam gets pulled out of the business to firefight.`,`"What happens at a shop when the internet or the tills go down on a busy morning?"`],
-['Staffing and scheduling',`Coffee shops usually have lots of staff turnover, many part-timers and students whose availability changes each semester. Building 12 rotas and covering sudden gaps takes a lot of time.`,`Managers lose hours on admin, shops run short or overstaffed, and training new people never stops.`,`"How do you build the schedules today, and who covers when someone calls in sick?"`],
-['Keeping every shop the same',`Customers love the warm experience, but 12 shops mean 12 managers. Drink quality, service speed, even the Wi-Fi login can differ from shop to shop.`,`The brand promise is at risk, and growing to 20 shops means copying that experience 8 more times.`,`"How do you make sure a customer gets the same experience in shop 3 as in shop 12?"`],
-['Stock, waste and guessing demand',`Milk, pastries and other fresh items spoil fast. Demand near campuses swings with term time, exams and holidays. Ordering is often by gut feel.`,`Money thrown away on waste, or shelves empty when a rush hits.`,`"How do you decide how much to order for each shop?"`],
-['Queues at peak times',`Morning and between-lecture rushes create long lines. Mobile ordering and fast payments help only if the connection is reliable.`,`Customers walk away, and a poor peak-hour experience is what people remember.`,`"What do the busiest 30 minutes look like at your campus shops?"`],
-['Protecting customer and card data',`Card payments at 12 sites, guest Wi-Fi, staff logging in from shared devices, and nobody whose full-time job is security.`,`One breach could mean fines, lost trust, and a very bad week for a brand built on trust.`,`"Who looks after the security of payments and customer data across all the shops?"`],
-['Sam is the bottleneck',`Sam makes most big decisions personally and has a small team. Every system problem, hire and purchase lands on one desk.`,`No time to think about the next 8 shops. This is the stretched-thin feeling you picked up from the brief.`,`"Which decisions do you wish you could hand off, and what would you do with that time?"`]
-];
-const AIB=[
-['Writing and marketing help','Real now, the most common starting point',`Drafting emails, social posts, promotions and menu descriptions. Many owners start here because it is cheap and easy.`,`Campus promotions, announcing a new shop, replying to reviews.`,
- ['Indirect, but real',`Marketing AI needs two things: something to say and someone to say it to. Wi-Fi turns visitors into data and contacts, and Cisco security keeps that data safe.`,`Meraki guest Wi-Fi shows a branded login page. With customer consent, it can ask for an email, which builds a promo list. Wi-Fi analytics show visit patterns and repeat visitors, so offers go out at the right times. Duo protects the logins to the marketing and loyalty tools.`,`"Do you have a way today to know who your repeat customers are and when they come in?"`]],
-['Answering customer questions','Real now, but keep a human option',`Chatbots and AI phone answering for common questions. Some restaurants use AI to take reservation calls. Surveys show owners want a person available as a back-up.`,`Opening hours, order status, loyalty questions. Less useful for a coffee shop than for a restaurant with bookings.`,
- ['Light fit',`Chatbots and mobile ordering only work if the shop connection does.`,`Meraki keeps every shop reliably online. Webex also has customer contact and AI assistant tools, but they are built for larger call volumes, so mention them only if Sam has heavy phone or enquiry traffic.`,`"Where do customer questions come in today, and who answers them?"`]],
-['Staff scheduling','Real now in restaurants',`Tools that build shift schedules from availability and expected demand.`,`Student staff with changing timetables across 12 shops.`,
- ['Indirect',`Rota apps run on tablets and phones in the shop, so they need steady Wi-Fi.`,`Reliable Wi-Fi (Meraki) so clock-in and rota apps never stall. Camera or Wi-Fi traffic data can show the real busy periods to staff against. Webex messaging can handle shift cover requests.`,`"When someone cancels last minute, how does the shop find cover?"`]],
-['Reports and cost tracking','Real now, if the data is joined up',`AI that reads sales and cost data and writes a plain summary each day, instead of reports a few times a year.`,`One summary of all 12 shops. This only works if the shops feed data into one place, which is exactly what a patchwork prevents.`,
- ['Indirect, but it is the foundation',`AI reports are only as good as the data reaching them, and today the shops are a patchwork.`,`Cisco links all 12 shops securely into one network (SD-WAN through Meraki), so tills and systems can report to one place. Cisco does not provide the reporting AI itself.`,`"If every shop's sales landed in one place automatically, what would you look at first?"`]],
-['Bookkeeping and admin','Real now, needs checking',`Roughly 3 in 10 small business owners surveyed use AI for finance and bookkeeping, though most still check the output themselves.`,`Faster invoicing and expense sorting for a small team.`,
- ['Direct, on the security side',`Finance admin is a favourite target for scam emails and stolen logins.`,`Duo adds a second check on accounting and banking logins. Umbrella blocks dangerous websites, such as fake invoice pages, before they open.`,`"Who has access to your accounts and banking, and how are they protected?"`]],
-['Forecasting demand and stock','Growing, needs clean data',`Predicting busy periods and ordering the right amounts to cut waste.`,`Exam weeks and term breaks at the campus shops. Needs sales data from every shop in a consistent form.`,
- ['Indirect',`Forecasts improve when they combine sales with real foot traffic.`,`Meraki cameras and Wi-Fi analytics can count how busy a shop is, so Sam can compare people through the door with drinks sold and spot lost sales during queues. A reliable connection gets every till reporting to one place.`,`"Do you know how many people walk in versus how many buy at peak times?"`]],
-['AI that runs the business','Mostly hype for a business this size',`Big custom AI platforms, or replacing the people customers come to see. Surveys show owners stay selective and only a small share trust AI with high-stakes tasks like insurance.`,`The warm in-store experience is the brand. Do not suggest AI replaces it.`,
- ['Not relevant to Sam',`Cisco's AI products are for building and securing large AI systems, which suit big customers, not a coffee chain.`,`Nothing to bring to Sam here. The honest message is to be careful with anyone selling a total AI solution, and that the base layer comes first.`,`"What would you always want a person to handle?"`]]
-];
-const MKT=[
-['What marketing looks like for Rivera Coffee',`Social posts, promotions aimed at students, loyalty and repeat visits, online reviews, email, and launch buzz for each new shop. Sam is stretched thin, so this usually gets done late or not at all.`],
-['Where AI helps today',`Drafting posts and promotions, planning a content calendar, summarising customer reviews, writing replies, and tailoring offers when there is customer data to work from.`],
-['Where it goes wrong',`Generic or off-brand copy, mistakes nobody checks, careless use of customer data, and paying for tools without a plan. The brand is built on warmth, so a human voice still matters.`],
-['Where Cisco fits, and why',`Cisco does not sell the marketing AI. It supplies what marketing runs on: the guest Wi-Fi that turns visitors into contacts and insight, and the security that protects that data.`],
-['How it works in practice',`(1) Meraki guest Wi-Fi shows a branded login page. (2) With consent, customers can sign in with an email, which builds a promo list. (3) Wi-Fi and camera analytics show who returns and when shops are busy or quiet, so offers can target quiet hours. (4) Duo and Umbrella protect the customer list and the tools that use it. Always respect consent and local privacy rules.`],
-['A question that opens it naturally',`"When you run a promotion, how do you know if it worked, and how do you reach customers again afterwards?"`]
-];
-const CP=[
-['Reliable, fast Wi-Fi and internet in every shop','Cisco Meraki',`Think of a remote control for all 12 shops' internet. Instead of a technician visiting each shop, Sam or the contractor sees every shop on one web page, spots problems and fixes many of them remotely. New shops can be plugged in without a specialist visit.`,
- ['Access points (Wi-Fi boxes on the ceiling)','Switches (connect tills and printers by cable)','A security box (called MX) that links the shops together and can use a backup connection','One cloud dashboard showing every shop']
-,`Sam's patchwork behind the counter, outages that wait for the contractor, and opening shops 9 to 20 the same way as shops 1 to 8.`,`"What happens when the internet goes down at a busy shop, and how long until it is fixed?"`],
-['Keeping payments and customer data safe','Meraki security, Cisco Umbrella, Cisco Duo',`A building with a lock on every door, not just the front gate. A firewall acts as the security guard for each shop's network. Umbrella blocks dangerous websites before a device reaches them. Duo asks staff for a second proof, like a phone prompt, when they log in, so a stolen password alone is not enough.`,
- ['Firewall built into the shop network','Guest Wi-Fi kept separate from the card payment network','Blocks risky websites at every shop','A second login check for staff accounts and tools']
-,`Card payments at 12 sites with no in-house security person. Also protects the AI tools Sam might start using, since those tools often hold business data.`,`"If something went wrong with card data at one shop, who would know, and what would happen next?"`],
-['A better in-shop experience for customers','Meraki guest Wi-Fi and smart cameras',`Guest Wi-Fi with a branded login page showing the Rivera logo, kept apart from the business network. Dashboards can show how many people visit and how often they return. Smart cameras can count how busy a shop is without anyone watching a screen.`,
- ['Branded guest Wi-Fi login page','Visit and repeat-visitor insight for marketing','Occupancy and queue insight from cameras']
-,`Students who expect Wi-Fi, peak-time lines, and knowing which shops are busiest and when.`,`"Do customers use your Wi-Fi today, and do you know who your repeat visitors are?"`],
-['Staying connected as the team grows','Webex',`One app for calls, messaging and video meetings, so Sam's shop managers can reach each other and Sam without a patchwork of phone calls and group chats. It also has AI features, such as summaries of meetings.`,
- ['Team calling and messaging','Video meetings','Meeting summaries using AI']
-,`Sam being the middle person between 12 managers. The weakest fit of the four, so do not lead with it.`,`"How do your shop managers share what is going on today, and how does Sam hear about it?"`]
-];
-const GLOSS=[
-['Cloud-managed','You control the equipment over the internet from one web page, instead of a technician visiting each shop.'],
-['Dashboard','That one web page. Think of a map of all your shops showing which ones are healthy and which have a problem.'],
-['Access point','The box on the ceiling that gives out Wi-Fi.'],
-['Switch','A box that connects tills, printers and other devices to the network by cable.'],
-['Firewall','A security guard between the shop network and the internet. It decides what is allowed in and out.'],
-['SD-WAN','A smart, secure link joining all shops so they act like one network, and can use a backup connection if the main one fails.'],
-['MFA (multi-factor authentication)','A second proof of identity, like a phone prompt, when someone logs in.'],
-['Guest network','A separate Wi-Fi for customers that cannot reach payment or business systems.'],
-['PCI compliance','Card industry rules for protecting payment card data. Any shop that takes cards has to follow them.'],
-['POS (point of sale)','The till system.'],
-['Downtime','Time when systems are not working.']
-];
-
-const Q=[
-['Behavioral','Tell me about a time you influenced someone who did not report to you.',5,'Clarity and Ownership. Do they hear "I", and did you move a senior person?','Spend 45% of your time on Action. Show how you framed it around their priority.','Saying "we" for the entire answer.'],
-['Behavioral','Tell me about a time you delivered a measurable result.',0,'Do you know your numbers and your own contribution?','Say 80% and 27% in the first 20 seconds of Result. Split what you did from what the team did.','Burying the number at the end.'],
-['Behavioral','Tell me about a time you worked under a tight deadline or pressure.',1,'Composure and prioritisation.','Use Rahatak (three senior audiences, one pitch) or Noon. Name what you prioritised and why.','A story where the pressure was only "lots of work".'],
-['Behavioral','Tell me about a time something did not go to plan. What did you learn?',5,'Continuous Improvement. Learning is scored, so make it the second longest part.','Lead with the category leaders rejecting the solution, then how you changed your approach. End on the habit you now have.','A fake failure ("I work too hard").'],
-['Behavioral','Tell me about a time you learned something unfamiliar quickly.',4,'Learning Agility. This is a named CSAP capability.','Show your method: what you read, who you asked, how you tested yourself.','Only saying "I am a fast learner".'],
-['Behavioral','Tell me about a time you used AI. Where did you overrule it?',4,'Judgment with AI. Expect this in the Presentation too.','Give one specific wrong output, how you caught it, and your checking rule.','"AI did most of it."'],
-['Behavioral','Tell me about a time you took accountability for something others depended on.',3,'Ownership without hiding behind the team.','Use Ghana: you owned logistics and delivery timing. Say what you personally decided when a delivery was at risk.','Listing everyone else\'s work.'],
-['Behavioral','Tell me about a time you disagreed with a teammate, client or stakeholder.',5,'Can you handle friction and still keep the relationship?','Use the category leaders who wanted manual work. Show you listened to each need instead of arguing.','Making the other person the villain.'],
-['Motivation','Why sales, and why Cisco? (PREP, 45 seconds)',null,'Sales as a choice, not a fallback. Research done.','<b>Point:</b> I want to own an outcome, not only recommend one. <b>Reason:</b> at P&G I had to sell my own solution to leadership and it stuck. <b>Example:</b> Cisco took $9.3B of hyperscaler AI orders in FY26 and is a preferred technology partner in Stargate UAE, because AI runs on networking and security. <b>Point:</b> CSAP puts me in that engine.','Generic praise about size or brand.'],
-['Trap','If you could redo the last exercise, what would you change?',null,'Self-awareness in real time. Candidates report this between activities.','Pick one specific, small behavior: "I would have asked one more follow-up before moving on." Then say the fix.','"Nothing, it went well."'],
-['Trap','You have other options, including an SAP extension. Why commit to CSAP?',null,'Flight risk and commitment.','State it plainly: quota-carrying experience makes any later path stronger, and this is the program I chose on purpose. Do not volunteer other ambitions.','Sounding undecided about the year at the hub.']
-];
-
-const T={
-'Plan':()=>`<h2>Game plan</h2><p class="lead">Source: Cisco's Interview candidate instructions. Every answer uses STAR-L. Learning is the fifth beat, and it is scored.</p>
-<div class="c"><h3>Time split for a ~2 minute answer</h3><div class="bar"><b class="S" style="width:15%">S</b><b class="T" style="width:10%">T</b><b class="A" style="width:40%">A</b><b class="R" style="width:20%">R</b><b class="L" style="width:15%">L</b></div>
-<small>Action is the largest slice. Say "I did", never "we did". Roughly 5 to 7 questions fit in 30 minutes, so aim for 2 minutes each and stop.</small>
-${Object.keys(KEYS).map(k=>`<div class="row ${k}"><span class="k">${k}</span><div><b>${KEYS[k]}</b> ${{S:'Context from work, volunteering or academics. 2 sentences.',T:'Your specific responsibility, deadline or conflict.',A:'Exact steps YOU took. The core of the answer.',R:'Measurable outcome from your actions.',L:'Takeaway plus how you do it better next time.'}[k]}</div></div>`).join('')}</div>
-<div class="g"><div class="c"><h3>What they score</h3><ul><li><b>Clarity and Ownership:</b> your contribution, your accountability.</li><li><b>Problem-Solving:</b> navigate a challenge, drive an outcome.</li><li><b>Continuous Improvement:</b> the Learning beat.</li></ul></div>
-<div class="c"><h3>The room</h3><ul><li>Account Managers from Sales Enablement, Field Sales and Global Velocity Sales. Velocity is Cisco's high-velocity inside sales motion, where CSAP alumni land.</li><li>Recruiters may stay in the room between activities. Be consistent all day.</li></ul></div></div>
-<div class="c"><h3>Practice tools</h3><p><button class="p" id="tm">Start 2:00 answer timer</button> <b id="tv" class="m" style="font-size:16px"></b></p><p><small>Cover mode blurs answers so you rehearse from the STAR-L letters. Tap a blurred line to peek.</small></p>
-<p><small>AI mock prompt (from Cisco's own suggestion):</small></p><p class="ans"><small id="pr">Act as a Cisco assessor from Field Sales interviewing me for the Associate Sales Representative role. Ask one behavioral question at a time, wait for my answer, then check that I hit Situation, Task, Action, Result and Learning, that I said "I" not "we", and that Learning is specific. Tell me what to cut.</small></p><button class="p" id="cp">Copy prompt</button></div>`,
-'About me':()=>`<h2>Tell me about yourself</h2><p class="lead">Funnel method: broad, then focused, then specific to Cisco. About 2 minutes.</p>${tmayHTML()}`,
-'Stories':()=>`<h2>Story bank</h2><p class="lead">Six stories cover almost any question. Yellow blocks are gaps only you can fill. Fill them, then say each aloud in 2 minutes.</p>`+STORIES.map((s,i)=>`<details ${i?'':'open'}><summary><span><span class="tag">${s.t}</span><br>${s.n}</span></summary><div class="in">${row(s)}</div></details>`).join(''),
-'Questions':()=>`<h2>Question bank</h2><p class="lead">${Q.length+1} likely questions. The answer sits directly under each question.</p><details><summary><span><span class="tag">Opener</span>Tell me about yourself.</span></summary><div class="in">${tmayHTML()}</div></details>`+Q.map(q=>`<details><summary><span><span class="tag">${q[0]}</span>${q[1]}</span></summary><div class="in">${q[2]!==null?`<div class="m">Your answer: ${STORIES[q[2]].n}</div>${row(STORIES[q[2]])}<p><b>Angle:</b> <span class="ans">${f(q[4])}</span></p>`:`<p><b>Answer:</b> <span class="ans">${f(q[4])}</span></p>`}<p><b>Testing:</b> ${q[3]}</p><div class="w2"><b>Avoid:</b> ${q[5]}</div></div></details>`).join(''),
-'Role play':()=>`<h2>Role play: discovery call with Sam</h2><p class="lead">20 minutes live call, then 10 minutes assessor feedback. You are an Associate Sales Rep. Sam runs Rivera Coffee Co., 12 shops. Come with questions and a plan, not a script.</p>
-<div class="c"><h3>Your one goal</h3><p><b>Earn the second meeting.</b> No pitch, no demo. Understand Sam's business, what is in the way, and what it costs. Sam should leave feeling understood.</p>
-<p style="margin-top:10px"><button class="p" id="rtm">Start 20 min call timer</button> <b id="rtv" class="m" style="font-size:15px"></b></p></div>
-<div class="c"><h3>Live cheat-sheet</h3>
-${PH.map(p=>`<div class="row A" style="--x:var(--ac)"><span class="k" style="width:auto;padding:0 6px">${Math.floor(p[0]/60)}m</span><div><b>${p[1]}</b> <small>(${p[2]})</small><br><small>${p[3]}</small></div></div>`).join('')}
-<div class="w2 ok"><b>Five follow-ups that always work:</b> "Tell me more about that." "Why does that matter?" "What is that costing you?" "What have you tried?" "What would good look like?"</div>
-<div class="w2"><b>Talk ratio:</b> aim for Sam talking about 70% of the time. Ask the question underneath the first answer.</div></div>
-<h3 style="margin:18px 0 4px">Sam and Rivera Coffee Co.</h3>
-<div class="g"><div class="c"><h3>The business</h3><ul><li>Grew from 3 to 12 shops in about 3 years, aiming for 20 in 2 more.</li><li>Known for quality drinks, warm service, loyal regulars. Two busiest shops are near college campuses.</li><li>Each shop opened as its own project, so systems were added one at a time: a patchwork behind the counter.</li></ul></div>
-<div class="c"><h3>Sam the person</h3><ul><li>Proud, protective of the customer experience, stretched thin.</li><li>Makes most big decisions personally. Small team plus an outside IT contractor who visits when things break.</li><li>A business owner, not a technologist. No jargon. Skeptical of "another vendor". Curious but overwhelmed by AI.</li></ul></div></div>
-<h3 style="margin:18px 0 4px">What Sam may already be struggling with</h3>
-<p class="lead">This is what a growing 12-shop coffee chain typically wrestles with day to day. Treat these as guesses to test with questions. Never say "I bet your Wi-Fi goes down", ask what happens when it does.</p>
-<div class="c"><h3>The three to listen for first</h3><ul><li><b>Visibility:</b> Sam cannot see all 12 shops at once.</li><li><b>Downtime:</b> things break at peak times and wait for a contractor.</li><li><b>Sam's time:</b> everything lands on one desk.</li></ul></div>
-${STRUG.map((s,i)=>`<details ${i?'':'open'}><summary><span><span class="tag">${i+1}</span>${s[0]}</span></summary><div class="in"><div class="row S"><span class="k">1</span><div><b>What it looks like:</b> ${s[1]}</div></div><div class="row A" style="--x:var(--rd)"><span class="k">2</span><div><b>What it costs Sam:</b> ${s[2]}</div></div><div class="row R"><span class="k">3</span><div><b>Ask:</b> <span class="ans">${s[3]}</span></div></div></div></details>`).join('')}
-<h3 style="margin:18px 0 4px">Opening and question bank</h3><p class="lead">Open questions only (what, how, why). Each block has the first question and the layers underneath.</p>
-<details open><summary><span><span class="tag">Open</span>Your first 2 minutes</span></summary><div class="in"><p class="ans">${PH[0][4]}</p></div></details>
-${RQ.map(g=>`<details><summary><span>${g[0]}</span></summary><div class="in">${g[1].map(c=>`<div class="c" style="margin:8px 0"><div class="row S"><span class="k">1</span><div>${c[0]}</div></div>${c.slice(1).map((x,i)=>`<div class="row T"><span class="k">${i+2}</span><div>${x}</div></div>`).join('')}</div>`).join('')}</div></details>`).join('')}
-<h3 style="margin:18px 0 4px">Where AI shows up for small businesses right now</h3>
-<p class="lead">Use this to separate real from noise with Sam. Figures come from 2026 owner surveys, so quote them loosely, for example "around two thirds".</p>
-<div class="g"><div class="c"><h3>Roughly 2 in 3</h3><small>US small businesses now use some form of AI. One mid-2026 survey put it at 66%, up from 55% a year earlier.</small></div>
-<div class="c"><h3>7 in 10 want training</h3><small>Most owners say they need more training to use it well. Another survey found the learning curve is a top barrier. Sam feeling overwhelmed is normal, not behind.</small></div>
-<div class="c"><h3>Owners stay selective</h3><small>They use AI for writing, admin and customer questions, and still want a person involved for anything high-stakes.</small></div></div>
-<div class="c" style="border-left:4px solid var(--ac)"><h3>Where Cisco fits in Sam's AI story</h3><p>Cisco does not sell the marketing, scheduling or reporting AI. It makes them work better and more safely in three ways:</p><ul><li><b>Connect:</b> every shop reliably online and linked together, so data can flow to one place.</li><li><b>Protect:</b> customer data, payments and staff logins, including the logins to AI tools.</li><li><b>Provide data:</b> Wi-Fi and camera insight into who visits and when, which marketing and forecasting can use.</li></ul></div>
-<details open><summary><span><span class="tag">Deep dive</span>Marketing in a small business, and where Cisco fits</span></summary><div class="in">${MKT.map((m,i)=>`<div class="row ${i==3||i==4?'T':'S'}"><span class="k">${i+1}</span><div><b>${m[0]}:</b> <span class="ans">${m[1]}</span></div></div>`).join('')}</div></details>
-<p class="lead" style="margin-top:12px">Each use case below shows what it means for Sam and where Cisco fits, if at all:</p>
-${AIB.map((a,i)=>`<details ${i?'':'open'}><summary><span><span class="tag">${a[1].split(',')[0]}</span>${a[0]}</span></summary><div class="in"><p><b>Status:</b> ${a[1]}</p><p><b>What it is:</b> ${a[2]}</p><div class="w2 ok" style="border-color:var(--A)"><b>For Sam:</b> ${a[3]}</div>
-<div class="c" style="border-left:4px solid var(--ac)"><div class="m">Where Cisco fits: ${a[4][0]}</div><p><b>Why:</b> ${a[4][1]}</p><p><b>How:</b> ${a[4][2]}</p><p><b>Ask:</b> <span class="ans">${a[4][3]}</span></p></div></div></details>`).join('')}
-<div class="c"><h3>The honest line to say</h3><p class="ans">"AI only helps if it solves a real problem. Let's find the problem first, and then see whether AI is even the right tool."</p></div>
-<div class="c"><h3>AI questions to ask Sam</h3><ul><li>"Has anyone on your team tried any AI tools yet, even just for writing?"</li><li>"Where would an extra pair of hands help the most?"</li><li>"Is there anything you would not want AI anywhere near?" (This opens customer data and trust.)</li></ul></div>
-<p class="lead" style="margin-top:8px">You have grown up with these tools and Sam has not. Your value is helping a non-technical owner separate real opportunity from hype.</p>
-<small>Sources: Thryv 2026 AI and Small Business Adoption Survey (Jul 2026), Simply Business 2026 Small Business AI Outlook, US Chamber of Commerce small business AI research, and reporting on restaurant owners using AI.</small>
-<h3 style="margin:22px 0 4px">Cisco in plain English: what you would actually be talking about</h3>
-<p class="lead">You do not need to know the catalog. You do need to understand what each area means for Sam, so your questions are well aimed. Do not pitch products on the call. Describe the idea, and bring a colleague from the technical team for detail.</p>
-<div class="c"><h3>The big picture: AI sits on top of a foundation</h3>
-<div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
-<div class="c" style="margin:0;border-left:4px solid var(--L)"><b>Top: AI tools</b><br><small>Scheduling, forecasting, customer chat, reporting. What Sam is curious about. Cisco does not sell these coffee-shop AI apps.</small></div>
-<div class="c" style="margin:0;border-left:4px solid var(--T)"><b>Middle: joined-up systems and clean data</b><br><small>Tills, stock, schedules and sales from all 12 shops feeding one place.</small></div>
-<div class="c" style="margin:0;border-left:4px solid var(--ac);background:var(--sf2)"><b>Base: reliable, secure connection and access (Cisco's territory)</b><br><small>Wi-Fi, network, security and logins in every shop. If this is shaky, everything above it disappoints.</small></div></div>
-<p class="ans" style="margin-top:8px"><b>Your angle:</b> Sam is excited about the top layer. Your job is to understand the base first, because AI only works well on top of it.</p></div>
-${CP.map((c,i)=>`<details ${i?'':'open'}><summary><span><span class="tag">${c[1]}</span>${c[0]}</span></summary><div class="in">
-<div class="c" style="border-left:4px solid var(--ac)"><div class="m">In plain English</div><p>${c[2]}</p></div>
-<div class="c"><div class="m">What it includes</div><ul>${c[3].map(x=>`<li>${x}</li>`).join('')}</ul></div>
-<div class="c" style="border-left:4px solid var(--A)"><div class="m">What it fixes for Sam</div><p>${c[4]}</p></div>
-<div class="w2 ok"><b>Raise it as a question:</b> <span class="ans">${c[5]}</span></div></div></details>`).join('')}
-<div class="c"><h3>If Sam asks, "So what does Cisco actually do?"</h3><p class="ans">"We make the technology that keeps businesses connected and protected: the Wi-Fi and network in each shop, the security around it, and one screen to manage all of it. For a chain like yours, that means every shop works the same way, customers get reliable Wi-Fi and your data stays protected. AI tools sit on top of that, so getting the foundation right makes them work better. I'd rather understand your business first before suggesting anything."</p></div>
-<h3 style="margin:18px 0 4px">Jargon decoder</h3>
-<p class="lead">If you use a technical word, translate it straight away. Sam is a business owner, not a technologist.</p>
-${GLOSS.map(g=>`<div class="c" style="padding:10px 14px;margin:6px 0"><b>${g[0]}:</b> <small>${g[1]}</small></div>`).join('')}
-<small>Product details are drawn from Cisco Meraki retail and restaurant material and Cisco's small business pages. Check current product names before naming anything to Sam. On the call, describe, do not name-drop.</small>
-<h3 style="margin:18px 0 4px">If Sam pushes back</h3>
-${OBJ.map(o=>`<details><summary><span>${o[0]}</span></summary><div class="in"><p class="ans">${o[1]}</p></div></details>`).join('')}
-<h3 style="margin:18px 0 4px">Good vs weak discovery</h3>
-<div class="g"><div class="c"><h3>Do</h3><ul><li>Open questions, what, how, why</li><li>Listen more than you talk</li><li>Follow up on what Sam says</li><li>Dig into why it matters and what it costs</li><li>Say "I don't know" when you do not</li></ul></div>
-<div class="c"><h3>Avoid</h3><ul><li>Jumping to products in the first few minutes</li><li>Pitching AI features Sam never asked about</li><li>Asking what basic research would have told you</li><li>Talking so much Sam never opens up</li></ul></div></div>
-<div class="c"><h3>What they score</h3><ul><li><b>Learning Agility:</b> how fast you get up to speed on Sam's world.</li><li><b>Earn the Second Meeting:</b> would Sam genuinely want to talk again?</li><li><b>Judgment with AI:</b> how you used AI to prepare, and how you help Sam tell real from hype.</li></ul></div>
-<h3 style="margin:18px 0 4px">Prepare with AI (they expect it)</h3>
-<div class="c"><p><small>They care about where you applied your own judgment on top of it. Use these, then write what you changed.</small></p>
-<p class="ans"><small id="rp1">Act as Sam Rivera, owner of a 12-shop coffee chain that grew from 3 shops in 3 years. You are busy, a little skeptical of vendors, curious but overwhelmed about AI, and not technical. I am a Cisco Associate Sales Rep on a 20-minute first call. Stay in character, answer briefly, reveal problems only if I ask good follow-up questions, and do not volunteer information. After 20 minutes, give me feedback on my listening, my follow-ups, and whether you would take a second meeting.</small></p>
-<button class="p" id="rc1">Copy Sam prompt</button>
-<p style="margin-top:12px" class="ans"><small id="rp2">List the 10 biggest operational, technology and customer experience challenges a 12-shop coffee chain growing to 20 shops would face, including two near college campuses. Then tell me which of those AI could realistically help and which is hype.</small></p>
-<button class="p" id="rc2">Copy research prompt</button></div>
-<div class="c"><h3>Say this in the feedback: how I used AI</h3><p class="ans">I used AI to research how a chain like Rivera Coffee runs and to draft discovery questions. <mark class="f">Name 2 questions AI gave you that you cut or rewrote, and why.</mark> <mark class="f">Name 1 thing AI got wrong or missed that you added yourself.</mark></p></div>
-<h3 style="margin:18px 0 4px">The 10-minute feedback</h3>
-<div class="c"><ul><li>Listen first. Do not defend.</li><li>Ask one clarifying question about what you could do better.</li><li>Say one specific thing you would change next time, then stop. Assessors may also ask this later, so have your answer ready.</li></ul></div>`,
-'Cisco':()=>`<h2>Cisco brief</h2><p class="lead">Keep this light. Cisco says no technical read-up is needed, but one sharp fact per answer earns credibility.</p>
-<div class="g"><div class="c"><h3>Where Cisco is now</h3><ul><li>FY26 revenue $63.3B, up 12%. Q4 was $17.25B, up 18%.</li><li>Hyperscaler AI infrastructure orders hit $9.3B in FY26, about 4.5x prior year. $7.5B of AI revenue is expected in FY27.</li><li>Cisco Live 2026 theme: AgenticOps and Cisco Cloud Control, with AI Defense for securing agents.</li></ul></div>
-<div class="c"><h3>UAE angle</h3><ul><li>Cisco signed on as a preferred technology partner for Stargate UAE (1 GW target, first 200 MW planned for 2026) with G42, OpenAI, Oracle, NVIDIA and SoftBank.</li><li>Say "signed on to provide networking, security and observability", not that it is already built.</li></ul></div></div>
-<div class="c"><h3>The program</h3><p>12 months: about 3 months of bootcamp, three rotations with quarterly checkpoints, then an Inside Account Executive role. Alumni mentors and Associate Solutions Engineers support you.</p><div class="w2 ok"><b>Hub:</b> London. Say it confidently. Confirm start dates with your recruiter.</div></div>
-<h3 style="margin:18px 0 6px">The three solutions (from Cisco's own pages)</h3>
-<p class="lead">Each card starts in plain English, then shows how it applies to Sam's coffee chain. For the Role Play, the Sam context matters most. Anchor on outcomes and budget, not features.</p>
-${SOL.map((s,i)=>`<details ${i?'':'open'}><summary><span><span class="tag">${s.tag}</span>${s.n}</span></summary><div class="in"><p><i>${s.one}</i></p>
-<div class="c" style="border-left:4px solid var(--ac)"><div class="m">In plain English</div><p>${s.plain}</p></div>
-<div class="c"><div class="m">What you actually get</div><ul>${s.get.map(x=>`<li>${x}</li>`).join('')}</ul></div>
-<div class="c" style="border-left:4px solid var(--A)"><div class="m">In the context of Sam's coffee chain</div><p>${s.sam}</p></div>
-<div class="row A"><div><b>Problem:</b> ${s.p}</div></div><div class="row S"><div><b>Why now:</b> ${s.w}</div></div><div class="row T"><div><b>Why Cisco:</b> ${s.d}</div></div><div class="row R"><div><b>Who cares:</b> ${s.c}</div></div>
-<p><b>Product names (so you recognise them):</b> ${s.k}</p><div class="w2 ok"><b>Sample line:</b> <span class="ans">${s.l}</span></div></div></details>`).join('')}</div>
-<small>Sources: Cisco Q4 FY26 release and call coverage (Aug 2026), Cisco Stargate UAE release (May 2025), Cisco Live 2026 coverage, Cisco CSAP postings (Jul 2026).</small>`,
-'Ask them':()=>`<h2>Questions to ask</h2><p class="lead">Pick two. They are Account Managers, so ask about their real job.</p>`+[
-['What did the ASRs who progressed fastest do differently in their first 90 days?','Signals: coachability and drive.'],
-['How do Field Sales and Velocity work together on the same customer?','Signals: you understand the sales model.'],
-['What is one mistake you made early as an Account Manager, and what did you change?','Signals: it mirrors the Learning beat.'],
-['How are AI tools changing your own prospecting and account planning?','Signals: current and curious about AI in sales.']].map(a=>`<div class="c"><h3>${a[0]}</h3><small>${a[1]}</small></div>`).join('')+`<div class="w2"><b>Never ask:</b> anything on the CSAP page, salary before an offer, or whether cold outreach is really required.</div>`,
-'Risks':()=>`<h2>Risks and checklist</h2><div class="g">`+[
-['No quota experience','Name it first: you sold your own solution to leadership at P&G and that is your closest proof. "I have not carried a quota yet, which is why I want this program."'],
-['Saying "we"','Rehearse each story with only "I". Assessors score individual contribution.'],
-['Thin Learning beat','Write one specific behavior change per story, not "I learned to communicate".'],
-['Flight risk','Interest in strategy and building things is real. Frame quota ownership as a foundation, not a detour.'],
-['Year at the hub','Settle your answer before you walk in. Hesitation reads as attrition risk.']].map(r=>`<div class="c"><h3>${r[0]}</h3><small>${r[1]}</small></div>`).join('')+`</div><h3 style="margin:18px 0 4px">Checklist</h3><div id="cl"></div>`
-};
-const CL=['Filled every yellow block in the 6 stories','Said each story aloud in under 2 minutes','Checked each answer for "I" vs "we"','Wrote a specific Learning line for every story','Ran the AI mock interview at least twice','Can state 3 Cisco facts without notes','Chose 2 questions to ask','Confirmed start dates with recruiter','Prepared a one-line answer to "what would you redo?"','Tested camera, mic and connection (or route and arrival time)'];
-const nav=$('#nav'),app=$('#app');
-Object.keys(T).forEach((k,i)=>{const b=document.createElement('button');b.textContent=k;b.onclick=()=>show(k);nav.append(b);const s=document.createElement('section');s.className='s';s.id='s'+i;s.innerHTML=T[k]();app.append(s)});
-function show(k){const ks=Object.keys(T);ks.forEach((x,i)=>{$('#s'+i).classList.toggle('on',x===k);nav.children[i].classList.toggle('on',x===k)});window.scrollTo({top:0})}
-show('Plan');
-document.addEventListener('click',e=>{const a=e.target.closest('.ans');if(a&&document.body.classList.contains('cover'))a.classList.toggle('show')});
-$('#cv').onclick=e=>{const c=document.body.classList.toggle('cover');e.target.textContent='Cover mode: '+(c?'on':'off')};
-$('#th').onclick=()=>{const r=document.documentElement,d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark'};
-let iv;$('#tm').onclick=()=>{clearInterval(iv);let n=120;const u=()=>{$('#tv').textContent=Math.floor(n/60)+':'+String(n%60).padStart(2,'0')};u();iv=setInterval(()=>{n--;u();if(n<=0){clearInterval(iv);$('#tv').textContent='Time. Land the Learning.'}},1000)};
-$('#cp').onclick=e=>{navigator.clipboard&&navigator.clipboard.writeText($('#pr').textContent);e.target.textContent='Copied'};
-
-let riv;$('#rtm').onclick=()=>{clearInterval(riv);let n=0;const u=()=>{let ph=PH[0];PH.forEach(p=>{if(n>=p[0])ph=p});$('#rtv').textContent=Math.floor(n/60)+':'+String(n%60).padStart(2,'0')+' / 20:00 · '+ph[1]};u();riv=setInterval(()=>{n++;u();if(n>=1200){clearInterval(riv);$('#rtv').textContent='Time. Move to feedback.'}},1000)};
-[['rc1','rp1'],['rc2','rp2']].forEach(a=>{$('#'+a[0]).onclick=e=>{navigator.clipboard&&navigator.clipboard.writeText($('#'+a[1]).textContent);e.target.textContent='Copied'}});
-let st={};try{st=JSON.parse(localStorage.getItem('csapCl')||'{}')}catch(e){}
-$('#cl').innerHTML=CL.map((t,i)=>`<div class="ck ${st[i]?'d':''}" data-i="${i}"><i>${st[i]?'✓':''}</i><span>${t}</span></div>`).join('');
-$('#cl').onclick=e=>{const d=e.target.closest('.ck');if(!d)return;const i=d.dataset.i;st[i]=!st[i];d.classList.toggle('d',st[i]);d.firstChild.textContent=st[i]?'✓':'';try{localStorage.setItem('csapCl',JSON.stringify(st))}catch(e){}};
+var tabs=[].slice.call(document.querySelectorAll('.tab')),nav=document.getElementById('nav');
+function show(i){tabs.forEach(function(t,j){t.classList.toggle('on',i===j)});[].slice.call(nav.children).forEach(function(b,j){b.classList.toggle('on',i===j)});window.scrollTo(0,0)}
+tabs.forEach(function(t,i){var b=document.createElement('button');b.textContent=t.getAttribute('data-t');b.onclick=function(){show(i)};nav.appendChild(b)});
+show(0);
 </script>
-</body>
-</html>
+</body></html>
